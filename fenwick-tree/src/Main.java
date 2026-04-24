@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Main {
+
     public static void main(String[] args) {
         int[] arr = { 2, 4, 5, 7, 8, 10 };
 
@@ -12,8 +13,8 @@ public class Main {
 
         System.out.println("Array: " + Arrays.toString(arr));
         System.out.println("Fenwick Tree: " + Arrays.toString(fenwickTree.getTree()));
-        System.out.println("Soma até a posição 3: " + fenwickTree.query(3));
-        System.out.println("Soma até a posição 2 a 4: " + fenwickTree.queryRange(2, 4));
+        System.out.println("Sum until position 3: " + fenwickTree.query(3));
+        System.out.println("Sum between postions 2 and 4: " + fenwickTree.queryRange(2, 4));
     }
 
 }

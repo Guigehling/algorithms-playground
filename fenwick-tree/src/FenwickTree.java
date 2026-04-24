@@ -20,6 +20,7 @@ public class FenwickTree {
     public void update(int i, int value) {
         while (i <= this.n) {
             tree[i] += value;
+            System.out.println("Position on update:" + (i & -i));
             i += i & -i;
         }
     }
@@ -39,6 +40,7 @@ public class FenwickTree {
         int sum = 0;
         while (i > 0) {
             sum += tree[i];
+            System.out.println("Position on query:" + (i & -i));
             i -= i & -i;
         }
         return sum;
