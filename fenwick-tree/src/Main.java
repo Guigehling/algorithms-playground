@@ -7,9 +7,9 @@ public class Main {
 
         FenwickTree fenwickTree = new FenwickTree(arr);
 
-        for (int i = 0; i < arr.length; i++) {
-            fenwickTree.update(i + 1, arr[i]);
-        }
+        // for (int i = 0; i < arr.length; i++) {
+        //     fenwickTree.update(i + 1, arr[i]);
+        // }
 
         System.out.println("Array: " + Arrays.toString(arr));
         System.out.println("Fenwick Tree: " + Arrays.toString(fenwickTree.getTree()));

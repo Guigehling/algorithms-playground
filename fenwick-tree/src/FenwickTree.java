@@ -14,7 +14,11 @@ public class FenwickTree {
 
     public FenwickTree(final int[] arr) {
         this.n = arr.length;
-        this.tree = new int[this.n + 1];
+        this.tree = new int[arr.length + 1];
+
+        for (int i = 0; i < n; i++) {
+            update(i + 1, arr[i]);
+        }
     }
 
     public void update(int i, int value) {
@@ -25,12 +29,13 @@ public class FenwickTree {
         }
     }
 
+    // Not working
     public void create(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
 
             int y = i;
             while (y < n) {
-                this.tree[y] += arr[i];
+                tree[y] += arr[i];
                 i += i & -i;
             }
         }
