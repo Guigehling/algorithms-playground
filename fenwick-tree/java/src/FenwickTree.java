@@ -41,7 +41,7 @@ public class FenwickTree {
         }
     }
 
-    public int query(int i) {
+    public int sum(int i) {
         int sum = 0;
         while (i > 0) {
             sum += tree[i];
@@ -51,8 +51,8 @@ public class FenwickTree {
         return sum;
     }
 
-    public int queryRange(int p1, int p2) {
-        return query(p2) - query(p1 - 1);
+    public int sumBetween(int p1, int p2) {
+        return sum(p2) - sum(p1 - 1);
     }
 
 }
