@@ -11,6 +11,9 @@ class FenwickTree {
     constructor(arr: IntArray) {
         this.n = arr.size
         this.tree = IntArray(arr.size + 1)
+        for (i in arr.indices) {
+            update(i + 1, arr[i])
+        }
     }
 
     fun getTree(): IntArray = tree
